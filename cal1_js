@@ -1,0 +1,288 @@
+class Calculadora{
+
+    sumar2mayor(){
+        //1) La suma de dos numeros siempre y cuando el primero sea mayor al segundo
+        let n1=Math.floor(Math.random()*10)
+        let n2=Math.floor(Math.random()*10)
+        if (n1>n2){
+            console.warn(`La suma de ${n1}+${n2}=${n1+n2}`)
+        }else{
+            console.warn(`El numero ${n2} es mayor ${n1} por lo tanto, no es posible hacer la suma`)
+        }
+    }
+    operaciones(){
+        //2) Realizar una operacion segun el operador(+,-,*,/,%) realizar la suma, resta, multiplicacion, division y reciduo
+        let nu1=Math.floor(Math.random()*10)
+        let nu2=Math.floor(Math.random()*10)
+        let rsuma=0, rresta=0, rmulti=0, rdiv=0, rresiduo=0
+        rsuma= nu1+nu2
+        rresta= nu1-nu2
+        rmulti= nu1*nu2
+        rdiv= nu1/nu2
+        rresiduo= nu1%nu2
+        console.warn("La suma de ", nu1, "+", nu2, "=", rsuma)
+        console.warn("La resta de ", nu1, "-", nu2, "=", rresta)
+        console.warn("La multiplicación de ", nu1, "*", nu2, "=", rmulti)
+        console.warn("La division de ", nu1, "/", nu2, "=", rdiv)
+        console.warn("El mod de ", nu1, "%", nu2, "=", nu1%nu2)
+    } 
+    presentarMayor(){
+        //3) Presentar el mayor de dos numeros
+        let n1=Math.floor(Math.random()*10)
+        let n2=Math.floor(Math.random()*10)
+        if(n1>n2){
+            console.log(`El primer numero es mayor: ${n1}`);
+        }else{
+            if(n2>n1){
+                console.log(`El segundo numero es mayor: ${n2}`)       
+        }else{
+            console.log(`Los numeros son iguales`)
+        }
+        }
+    }
+    leernombre(){
+        //4) Dado un nombre presentarlo
+        let nombre="CHRISTINA"
+        console.log(`El nombre ingresado es: ${nombre}`)
+    }
+    valorcompra(){
+        //5) Dado un valor de compra presentar el total considerando un 12% de iva
+        let  precioIva= precio*0.12
+        let precioTotal=precio+precioIva
+        console.log(`El precio es: ${precio} El Iva es: ${precioIva} El precio total es: ${precioTotal}`)
+    }
+    nombrePresentar5(){
+        //6) Presentar 5 veces un nombre
+        let nombre="Melly", c=1
+        while(c<=5){
+            console.log(nombre)
+            c=c+1
+        }
+    }
+    multi3del3_al21(){
+        //7) Presentar los numeros multiplos de 3 del 3 al 21
+        let c=3, multiplos=0
+        for(c=3;c<=21;c++){
+            multiplos=c%3
+            if(multiplos==0){
+                console.log(c)
+            }
+        }
+    }
+    multi3del21_al3(){
+        //8) Presentar los numeros multiplos de 3 del 21 al 3
+        let c=21, multiplos
+        for(c=21;c>=3;c--){
+            multiplos=c%3
+            if(multiplos==0){
+                console.log(c)
+            }
+        }
+    }
+    igual_diferente(){
+        //9) Dados dos nombres indicar si son iguales o diferentes
+        let name1="Juan",name2="juan"
+        name1=name1.toLowerCase()
+        name2=name2.toLowerCase()
+        console.warn("Los nombres son:", name1, name2)
+        if(name1==name2){
+            console.log("Los nombres dados, son iguales")
+        }
+        else{
+            console.log("Los nombres dados, son diferentes")
+        }
+    }
+    caracteresMenos5(){
+        //10) Dado diez numeros en un arreglo presentar los que tengan menos de 5 caracteres
+        let numero=[n1,n2,n3,n4,n5,n6,n7,n8,n9,n10],i=0,long=0
+        for(i=0;i<numero.length;i++){
+           log=numeros[i]
+        if(long.toString().length<5){
+            console.warn(`${long} tiene menos de 5 dijitos`);
+        }
+        }  
+    }
+    elementos(){
+        //11) Dado un arreglo presentar sus elementos
+        let arreglo=[29,8,7,1,18,3]
+        console.log(`Los elementos del arreglo son: "${arreglo}`)
+    }
+    menores10(){
+        //12) Dado un arreglo de numeros presentar los menores a 10
+        let arreglo=[7,4,10,8,11,2]
+        let num,i
+        for(i=0;i<arreglo.length;i++){
+            num=arreglo[i]
+            if(num.toString()<10)
+            console.log(num)
+        }
+    }
+    imparesSumapares(){
+        //13) Dado un arreglo de numeros presentar los impares y al final la suma de los pares
+        let numeros = [2, 5, 6, 8, 9, 10, 13]
+        let sumaPares = 0
+        for (let i = 0; i < numeros.length; i++){
+        if (numeros[i] % 2 === 0){
+            sumaPares += numeros[i]
+        }else{
+            console.log(numeros[i])
+        }
+        }
+        console.log(`La suma de los pares es: ${sumaPares}`);
+    }
+    presentarValores(){
+        //14) Presentar el primero el medio y el ultimo valor de un arreglo
+        let arreglo=[1,45,78,3,9]
+        let longitud=Math.floor(arreglo.length/2)
+        console.warn(`El arreglo es: ${arreglo}`)
+        console.log(`El primer numero es: ${arreglo[0]} El numero del medio es: ${arreglo[longitud]}El ultimo numero es: ${arreglo[arreglo.length-1]}`)
+     }
+    vuelto(){
+        //15) Calcular el vuelto de una compra dado el costo y el pago
+        let costo=4000, pago=7600; vuelto=0
+        vuelto=pago-costo
+        if(pago<costo){
+            console.log(`Fatlta dinero el pago no puede ser menor al costo`)
+        }else{
+            console.log(`El vuelto es: ${vuelto}`);
+        }    
+    }
+    tablaMultipli(){
+        //16) Presentar la tabla de multiplicar de cualquier numero del 1 al 12
+        let num=Math.floor(Math.random()*12)
+        for(let i = 1; i <= 12; i++){
+        let result = num * i
+        console.log(`${num} x ${i} = ${result}`)
+        }
+    }
+    sumasSucesivas(){
+        //17) Realizar la multiplicacion de dos numeros por medio de sumas sucesivas
+        let n1=Math.floor(Math.random()*10)
+        let n2=Math.floor(Math.random()*10)
+        let resultado = 0;
+        for (let i = 1; i <= n2; i++) {
+            resultado += n1;
+        }
+            console.log(`El resultado de la multiplicación es: ${resultado}`);
+    }
+    restasSucesivas(){
+        //18)Realizar la division de dos numeros por medio de restas sucesivas
+        let n1 = 5; 
+        let n2 = 2; 
+        let cociente = 0; 
+        while (n1 >= n2){
+            n1 -= n2;
+            cociente++;
+        }
+        console.log(`El cociente es: ${cociente}`);
+        console.log(`El residuo es: ${n1}`);
+    }
+    factorial(){
+        //19)Calcular el factorial de un numero
+        let n = 4; 
+        let factorial = 1; 
+        for (let i = n; i > 0; i--){
+        factorial *= i;
+        }
+        console.log(`El factorial de ${n} es: ${factorial}`);
+    }
+    exponente(){
+        //20)Calcular el exponente de un numero
+        let num = 4; 
+        let exp = 3; 
+        let resultado = 1;
+        for (let i = 0; i < exp; i++){
+         resultado *= num;
+        }
+        console.log(`${num} elevado a la ${exp} es: ${resultado}`);
+    }
+    fibonacci(){
+        //21)Calcular la serie de fibonacci dado un numero
+        let num = Math.floor(Math.random()*10)
+        let fib1 = 0; 
+        let fib2 = 1; 
+        let resultado = ''; 
+        while (fib2 <= num) {
+            resultado += fib2 + ' ';
+        let temp = fib2;
+        fib2 = fib1 + fib2;
+        fib1 = temp;
+        }
+        console.log(`La serie de Fibonacci hasta ${num} es: ${resultado}`);
+    }
+    numInvetido(){
+        //22) Dado un numero invertirlo
+        let num = 12356; 
+        let numInvertido = 0; 
+        while (num > 0) {
+        numInvertido = numInvertido * 10 + num % 10;
+        num = Math.floor(num / 10);
+        }
+        console.log(`El número invertido de ${12356} es: ${numInvertido}`);
+    }
+    divisores(){
+        //23) Presentar los divisores de un numero
+        let c
+        for(c=1;c<numb1;c++){
+            if(numb1%c==0){
+                console.log(`El numero <${c}> es divisor`)
+            }
+        }
+    }
+    perfecto(){
+        //24) Presentar si un numero es perfecto o no
+        let c,sumNum1=0
+        let n1=Math.floor(Math.random()*10)
+        for(c=1;c<n1;c++){
+            if(n1%c==0){
+                sumNum1=sumNnum1+c
+            }
+        }if(sumNum1==n1){
+            console.log(`El numero <${n1}> es perfecto`)
+        }else{
+            console.log(`El numero <${n1}> no es perfecto`)
+        }
+    }
+    primo(){
+        //25) Verfificar si un numero es primo o no
+        let c,cont=0
+        let numero=Math.floor(Math.random()*10)
+        for(c=1;c<=numero;c++){
+            if(numero%c==0){
+                cont=cont+1
+            }
+        }
+        if(cont==2){
+            console.log(`El numero ${numero} es primo`)
+        }else{
+            console.log(`El numero ${numero} no es primo`)
+    }
+}
+}
+let cal1= new Calculadora()
+cal1.suma()
+cal1.sumar2mayor()
+cal1.operaciones()
+cal1.presentarMayor()
+cal1.leernombre()
+cal1.valorcompra()
+cal1.nombrePresentar5()
+cal1.multi3del3_al21()
+cal1.multi3del21_al3()
+cal1.igual_diferente()
+cal1.caracteresMenos5()
+cal1.elementos()
+cal1.menores10()
+cal1.imparesSumapares()
+cal1.presentarValores()
+cal1.vuelto()
+cal1.tablaMultipli()
+cal1.sumasSucesivas()
+cal1.restasSucesivas()
+cal1.factorial()
+cal1.exponente
+cal1.fibonacci()
+cal1.numInvetido()
+cal1.divisores()
+cal1.perfecto()
+cal1.primo()
